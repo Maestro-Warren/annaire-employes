@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annuaire des Employés Orange</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Annuaire des Employés Orange</h1>
+    </header>
+
+    <main>
+      <section class="employee-form-section">
+        <h2>Ajouter un Employé</h2>
+        <form id="employeeForm">
+          <div class="form-group">
+            <label for="nom"><i class="fas fa-user"></i> Nom :</label>
+            <input type="text" id="nom" required />
+          </div>
+          <div class="form-group">
+            <label for="prenom"><i class="fas fa-user"></i> Prénom :</label>
+            <input type="text" id="prenom" required />
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email :</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="poste"
+              ><i class="fas fa-briefcase"></i> Poste/Fonction :</label
+            >
+            <input type="text" id="poste" required />
+          </div>
+          <button type="submit">
+            <i class="fas fa-plus"></i> Ajouter l'employé
+          </button>
+        </form>
+      </section>
+
+      <section class="employee-list-section">
+        <h2>Liste des Employés</h2>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔍 Rechercher un employé..."
+        />
+
+        <div id="employeeList" class="employee-list"></div>
+        <div id="employeeList" class="employee-list"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
