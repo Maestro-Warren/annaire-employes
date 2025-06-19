@@ -21,3 +21,4 @@ ________________________________________
 
 Bonus réalisés : 
 - Modification des information d'un employé
+- La RECHERCHE d'un employé
