@@ -1,25 +1,23 @@
 /* === VARIABLES CSS === */
 :root {
-  --orange-primary: #ff7900;     
-  --orange-dark: #cc6000;        
-  --text-color: #333;            
-  --background-light: #f4f4f4;   
-  --border-color: #ddd;          
-  --shadow-color: rgba(0, 0, 0, 0.1); 
+  --orange-primary: #ff7900;
+  --orange-dark: #cc6000;
+  --text-color: #333;
+  --background-light: #f4f4f4;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /* === STYLE GLOBAL === */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   height: 100vh;
   padding: 0;
-  background-color: var(--background-light); 
+  background-color: var(--background-light);
   color: var(--text-color);
   line-height: 1.6;
 }
-
-
 
 /* === HEADER === */
 header {
@@ -27,11 +25,12 @@ header {
   color: white;
   padding: 1rem 0;
   text-align: center;
-  box-shadow: 0 2px 5px var(--shadow-color); 
+  box-shadow: 0 2px 5px var(--shadow-color);
 }
 
 /* === TITRES === */
-h1, h2 {
+h1,
+h2 {
   margin: 0;
   color: var(--text-color);
 }
@@ -39,7 +38,7 @@ h1, h2 {
 h1 {
   font-size: 1.5rem;
   margin-bottom: 0.5em;
-  color: white; 
+  color: white;
 }
 
 h2 {
@@ -51,7 +50,8 @@ h2 {
 }
 
 /* === ICONES === */
-label i, .employee-info i {
+label i,
+.employee-info i {
   margin-right: 0.5em;
   color: var(--orange-primary);
 }
@@ -62,8 +62,8 @@ button i {
 
 /* === MISE EN PAGE PRINCIPALE === */
 main {
-  display: flex;         
-  flex-wrap: wrap;      
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
@@ -74,9 +74,10 @@ main {
 }
 
 /* === SECTIONS DE FORMULAIRE & LISTE === */
-.employee-form-section, .employee-list-section {
-  flex: 1;                  
-  min-width: 300px;         
+.employee-form-section,
+.employee-list-section {
+  flex: 1;
+  min-width: 300px;
   padding: 1.5rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -94,8 +95,9 @@ label {
   font-weight: bold;
 }
 
-input[type="text"], input[type="email"] {
-  width: calc(100% - 20px);     
+input[type="text"],
+input[type="email"] {
+  width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
@@ -123,16 +125,16 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: var(--orange-dark);
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
 }
 
 /* === LISTE DES EMPLOYÉS === */
 .employee-list {
   display: grid;
   gap: 1rem;
-  max-height: 400px;    
-  overflow-y: auto;     
-  padding-right: 10px;   
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 /* === RECHERCHE === */
@@ -152,15 +154,16 @@ button[type="submit"]:hover {
   box-shadow: 0 0 5px rgba(255, 121, 0, 0.5);
 }
 
-
 /* Scroll personnalisé */
 .employee-list::-webkit-scrollbar {
   width: 6px;
 }
+
 .employee-list::-webkit-scrollbar-thumb {
   background-color: var(--orange-primary);
   border-radius: 4px;
 }
+
 .employee-list::-webkit-scrollbar-track {
   background: transparent;
 }
@@ -178,7 +181,7 @@ button[type="submit"]:hover {
 }
 
 .employee-card:hover {
-  transform: translateY(-3px); 
+  transform: translateY(-3px);
 }
 
 /* Texte dans les cartes */
@@ -187,12 +190,12 @@ button[type="submit"]:hover {
 }
 
 .employee-info p strong {
-  color: var(--orange-primary); 
+  color: var(--orange-primary);
 }
 
 /* === BOUTONS MODIFIER & SUPPRIMER === */
 .employee-card button {
-  background-color: #e67e22; 
+  background-color: #e67e22;
   color: white;
   padding: 8px 12px;
   border: none;
@@ -203,15 +206,15 @@ button[type="submit"]:hover {
 }
 
 .employee-card .delete-btn {
-  background-color: #e74c3c; 
+  background-color: #e74c3c;
 }
 
 .employee-card .delete-btn:hover {
-  background-color: #c0392b; 
+  background-color: #c0392b;
 }
 
 .employee-card .edit-btn:hover {
-  background-color: #d35400; 
+  background-color: #d35400;
 }
 
 /* === FOOTER === */
@@ -224,48 +227,195 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 footer p {
   margin: 0;
   font-size: 0.9em;
 }
+
 /* === ANIMATIONS === */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 body {
-  animation: fadeIn 0.5s ease-in-out; 
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-/* === RESPONSIVE (mobile) === */
-@media (max-width: 768px) {
-  main {
-    flex-direction: column; 
-    padding: 1rem;
-    margin: 1rem auto;
-  }
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
 
-  .employee-form-section, .employee-list-section {
-    width: 100%;
+/* Tablets and larger phones  */
+@media (max-width: 1024px) {
+  main {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    gap: 1.5rem;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
-  .employee-card .delete-btn,
-  .employee-card .edit-btn {
-    width: 100%;       
-    margin-top: 5px;
+  .employee-form-section,
+  .employee-list-section {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .employee-list {
+    max-height: 500px;
   }
 }
 
+/* Medium phones */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
 
+  main {
+    padding: 1rem;
+    margin: 1rem auto;
+    gap: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  #searchInput {
+    font-size: 0.95em;
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    font-size: 1em;
+    padding: 10px 16px;
+  }
+
+  .employee-info p {
+    font-size: 0.95em;
+  }
+
+  .employee-card .card-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .employee-card button {
+    padding: 10px 12px;
+    font-size: 0.9em;
+  }
+
+  .employee-list {
+    max-height: 400px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 0.8rem;
+    margin: 0.8rem auto;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    border-bottom-width: 1px;
+  }
+
+  .employee-form-section,
+  .employee-list-section {
+    padding: 1rem 0.8rem; 
+  }
+
+  input[type="text"],
+  input[type="email"],
+  #searchInput {
+    font-size: 0.9em;
+    padding: 7px;
+  }
+
+  button[type="submit"] {
+    font-size: 0.95em;
+    padding: 8px 14px;
+  }
+
+  .employee-card {
+    padding: 0.8rem;
+  }
+
+  .employee-info p {
+    font-size: 0.9em;
+  }
+
+  .employee-card .card-buttons {
+    gap: 6px;
+  }
+
+  .employee-card button {
+    font-size: 0.85em;
+    padding: 8px 10px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 320px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  .employee-form-section,
+  .employee-list-section {
+    padding: 0.8rem 0.5rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  #searchInput {
+    font-size: 0.85em;
+    padding: 6px;
+  }
+
+  button[type="submit"] {
+    font-size: 0.9em;
+    padding: 7px 12px;
+  }
+
+  .employee-card {
+    padding: 0.7rem;
+  }
+
+  .employee-info p {
+    font-size: 0.85em;
+  }
+
+  .employee-card button {
+    font-size: 0.8em;
+    padding: 7px 8px;
+  }
+}

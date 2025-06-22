@@ -21,3 +21,7 @@ ________________________________________
 
 Bonus réalisés : 
 - Modification des information d'un employé
+- La Recherche specifique d'un employé
+________________________________________
+
+Depot GITHUB : https://github.com/Maestro-Warren/annaire-employes.git
